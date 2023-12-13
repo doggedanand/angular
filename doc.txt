@@ -1,0 +1,12 @@
+What Is Angular?
+Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. It enables users to create large applications in a maintainable manner. 
+
+What is component in Angular?
+In Angular, a component is the most basic building block of an Angular application. It is a self-contained piece of code that has its own template, style, and logic. Components are responsible for rendering the content and handling user interactions with the view.
+Components are declared using the @Component decorator, which takes a metadata object as its argument. The metadata object specifies the component's selector, template, style, and other properties.
+The template is an HTML file that defines the component's view. The style is a CSS file that defines the component's styles. The logic is written in a TypeScript class that is associated with the component.
+Components can be nested within other components to create complex UIs.
+
+What is template in Angular?
+A template is a form of HTML that tells Angular how to render the component. Views are typically organized hierarchically, allowing you to modify or show and hide entire UI sections or pages as a unit. The template immediately associated with a component defines that component's host view.
+
