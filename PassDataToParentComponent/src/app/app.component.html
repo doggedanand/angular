@@ -1,0 +1,8 @@
+<strong>Parent component</strong>
+<h1>{{ data }}</h1>
+<hr>
+<app-child-component
+  (updateDataEvent)="updateData($event)"
+></app-child-component>
+<!-- update Data event is custom event  -->
+<router-outlet></router-outlet>
