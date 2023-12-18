@@ -10,3 +10,21 @@ Components can be nested within other components to create complex UIs.
 What is template in Angular?
 A template is a form of HTML that tells Angular how to render the component. Views are typically organized hierarchically, allowing you to modify or show and hide entire UI sections or pages as a unit. The template immediately associated with a component defines that component's host view.
 
+What are the Life cycle hooks in Angular ?
+S.No.	Lifecycle Hook		 Description
+1	ngOnChanges		 Called after bound input properties changes
+2	ngOnInit		 Called once the component is initialized
+3	ngDoCheck		 Called during every change detection run
+4	ngAfterContentInit      Called after a content (ng-content) has been projected into view
+5	ngAfterContentCheck	 Called every time the projected content has been checked
+6	ngAfterViewInit	 Called after the component’s view and child views has been initialized
+7	ngAfterViewCheck	 Called after the component’s view and child views has been checked
+8	ngOnDestroy		 Called once the component is about to destroy
+
+What is view encapsulation ?
+In Angular, view encapsulation refers to a mechanism that prevents styles defined within a component from affecting other components in the application. This is crucial for maintaining modularity and preventing accidental styling conflicts.
+Emulated (default): This is the most common approach. It uses a technique called attribute scoping to add a unique identifier to the component's host element and its styles. This ensures that the styles only apply to the elements within the component.
+Shadow DOM: This leverages the browser's native Shadow DOM API to create a separate DOM tree for the component's view. This isolates the component's styles completely from the rest of the application, offering the most robust encapsulation.
+None: This option completely disables view encapsulation. Any styles defined within the component will be globally applied throughout the application. This is rarely used due to the potential for style conflicts.
+
+ubis0000582362 , 9670842185
