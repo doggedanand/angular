@@ -6,11 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = '7.event_binding';
-  btnClick() {
-    alert('btn clicked!');
-    setTimeout(() => {
-      alert('2nd alert!');
-    }, 2000);
-  }
+  title = '8.two_way_binding';
+  value: string = '';
 }
