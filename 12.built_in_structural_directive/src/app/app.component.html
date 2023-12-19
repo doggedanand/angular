@@ -1,0 +1,17 @@
+<!-- ngIf directive  -->
+<h1>ngIf directive</h1>
+<div *ngIf="isLoggedIn; else notLoggedIn">Welcome {{ username }}</div>
+<ng-template #notLoggedIn> Please log in to access the content. </ng-template>
+<!-- ngFor directive -->
+<h1>ngFor directive</h1>
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+<!--ngSwitch directive-->
+<h1>ngSwitch directive</h1>
+<div [ngSwitch]="userType">
+  <div *ngSwitchCase="'admin'">Welcome Admin!</div>
+  <div *ngSwitchCase="'user'">Welcome User!</div>
+  <div *ngSwitchDefault>Welcome Guest!</div>
+</div>
+<router-outlet></router-outlet>

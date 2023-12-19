@@ -1,0 +1,17 @@
+<div>
+  <!-- ngClass directive  -->
+  <h1>ngClass directive</h1>
+  <p [ngClass]="{ addClass: isSpecial }">{{ classData }}</p>
+  <!--ngStyle directive-->
+  <h1>ngStyle directive</h1>
+  <p [ngStyle]="{ 'font-size': fontSize + 'px', color: fontColor }">
+    {{ styleData }}
+  </p>
+  <!--ngModel-->
+  <h1>ngModel directive</h1>
+  <input [(ngModel)]="username" type="text" placeholder="Enter your name." />
+  <br />
+  <br />
+  <small>{{ username }}</small>
+</div>
+<router-outlet></router-outlet>

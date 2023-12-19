@@ -27,4 +27,11 @@ Emulated (default): This is the most common approach. It uses a technique called
 Shadow DOM: This leverages the browser's native Shadow DOM API to create a separate DOM tree for the component's view. This isolates the component's styles completely from the rest of the application, offering the most robust encapsulation.
 None: This option completely disables view encapsulation. Any styles defined within the component will be globally applied throughout the application. This is rarely used due to the potential for style conflicts.
 
-ubis0000582362 , 9670842185
+What is directive ?
+Directives are classes that add additional behavior to elements in your Angular applications.
+Types of Directives
+Directive Types	Details
+Components	Used with a template. This type of directive is the most common directive type.
+Attribute directives	Change the appearance or behavior of an element, component, or another directive.
+Structural directives	Change the DOM layout by adding and removing DOM elements.
+
