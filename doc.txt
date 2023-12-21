@@ -35,3 +35,6 @@ Components	Used with a template. This type of directive is the most common direc
 Attribute directives	Change the appearance or behavior of an element, component, or another directive.
 Structural directives	Change the DOM layout by adding and removing DOM elements.
 
+What is Dynamic Component ?
+Dynamic components are those components which we create dynamically at runtime.
+Dynamic component is not a specific feature provided by Angular. Insted, it is just like a normal component, which gets created on runtime. We create or render dynamic component by writing some code.
