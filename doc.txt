@@ -38,3 +38,8 @@ Structural directives	Change the DOM layout by adding and removing DOM elements.
 What is Dynamic Component ?
 Dynamic components are those components which we create dynamically at runtime.
 Dynamic component is not a specific feature provided by Angular. Insted, it is just like a normal component, which gets created on runtime. We create or render dynamic component by writing some code.
+
+What is template refrence variable ?
+In Angular, a template reference variable is a way to give a name to a specific element in your template so that you can easily refer to and manipulate it in your component code. You create a reference variable by using the hash symbol (#) followed by a name. This allows you to interact with the element directly in your component's logic.
+
+
