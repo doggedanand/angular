@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="">Name</label> &nbsp;
+    <input type="text" formControlName="name">
+    <br><br>
+    <label for="">Age</label> &nbsp;
+    <input type="number" formControlName="age">
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
+<router-outlet></router-outlet>
