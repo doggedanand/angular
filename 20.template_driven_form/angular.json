@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "20.template_drive_form": {
+    "20.template_driven_form": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/20.template_drive_form",
+            "outputPath": "dist/20.template_driven_form",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "20.template_drive_form:build:production"
+              "browserTarget": "20.template_driven_form:build:production"
             },
             "development": {
-              "browserTarget": "20.template_drive_form:build:development"
+              "browserTarget": "20.template_driven_form:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "20.template_drive_form:build"
+            "browserTarget": "20.template_driven_form:build"
           }
         },
         "test": {
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "154b242e-0d7c-494e-97d6-376556bee730"
+    "analytics": "63861164-13b7-40d8-8c47-76a8155f5b5e"
   }
 }
