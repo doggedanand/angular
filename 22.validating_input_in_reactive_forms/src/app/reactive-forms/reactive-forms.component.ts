@@ -9,14 +9,14 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class ReactiveFormsComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
   ngOnInit(): void {
 
 
-    this.loginForm = this.fb.group({
-      email: ['rd.anandv@gmail.com', [Validators.required, Validators.minLength(4)]],
-      password: ['']
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      password: new FormControl('', Validators.required)
     });
   }
 
@@ -25,8 +25,13 @@ export class ReactiveFormsComponent implements OnInit {
 
   }
 
-  get email() { return this.loginForm.get('email'); }
-  get password() { return this.loginForm.get('password'); }
+  get email() {
+    return this.loginForm.get('email');
+  }
+  get password(){
+    return this.loginForm.get('password')
+  }
+ 
 }
 
 

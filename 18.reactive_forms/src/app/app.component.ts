@@ -15,7 +15,7 @@ export class AppComponent {
       password: ['', [Validators.required, Validators.minLength(3)]],
     });
   }
-  onSubmit() {
+  submit() {
     if (this.myForm.valid) {
       const result = console.log(this.myForm.value);
     }

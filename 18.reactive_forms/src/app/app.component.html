@@ -9,7 +9,7 @@
    
     <div class="container mt-3">
       <div class="row mt-3">
-        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="myForm" (ngSubmit)="submit()">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
