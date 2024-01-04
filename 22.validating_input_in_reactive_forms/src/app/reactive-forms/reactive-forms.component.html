@@ -1,0 +1,18 @@
+<form (ngSubmit)="login(loginForm)" [formGroup]="loginForm" class="justify-content-center w-25 center_form">
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" name="email" formControlName="email" class="form-control" required>
+    </div>
+    <span *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+        This field is required.
+    </span>
+
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" formControlName="password" class="form-control">
+    </div>
+    <span *ngIf="password?.invalid" class="text-danger">Password is required.</span>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
