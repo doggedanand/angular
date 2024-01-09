@@ -1,0 +1,77 @@
+<h1 class="text-center mt-3">Angular Crud using Json Server.</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- Bootstrap Card -->
+            <div class="card">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form action="">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Age</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="me-3">Gender</label>
+                            <label class="radio-inline me-3"><input type="radio" name="gender">Male</label>
+                            <label class="radio-inline"> <input type="radio" name="gender">Female</label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Designation</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                    <!-- End Form -->
+                </div>
+            </div>
+            <!-- End Bootstrap Card -->
+        </div>
+    </div>
+</div>
+
+<!-- User Data -->
+<div class="card mt-3 col-lg-6 mx-auto">
+    <div class="card-body">
+        <h5 class="card-title text-center fw-bold">User Details</h5>
+        <table class="table w-100 mx-auto">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Designation</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Binded users data into table -->
+                <tr *ngFor="let user of users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.address}}</td>
+                    <td>{{user.designation}}</td>
+                    <td>
+                <tr>
+                    <td class="btn btn-sm btn-success" id="{{user.id}}">Edit</td>
+                    <td>&nbsp;</td>
+                    <td class="btn btn-sm btn-danger" id="{{user.id}}">Delete</td>
+                </tr>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
