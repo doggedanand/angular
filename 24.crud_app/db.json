@@ -1,0 +1,38 @@
+{
+    "post": [
+        {
+            "id": "1",
+            "name": "Anand",
+            "age": 22,
+            "gender": "Male",
+            "address": "Jalalabad",
+            "designation": "Programmer"
+        }
+    ],
+    "get": [
+        {
+            "id": "1",
+            "name": "Anand",
+            "age": 22,
+            "gender": "Male",
+            "address": "Jalalabad",
+            "designation": "Programmer"
+        },
+        {
+            "id": "2",
+            "name": "Rahul",
+            "age": 18,
+            "gender": "Male",
+            "address": "Bhagirathpur",
+            "designation": "Programmer"
+        },
+        {
+            "id": "3",
+            "name": "Ashish",
+            "age": 23,
+            "gender": "Male",
+            "address": "Bhagirathpur",
+            "designation": "Programmer"
+        }
+    ]
+}
