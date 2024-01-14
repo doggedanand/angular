@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Iuser } from '../models/iuser';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,12 @@ export class UserService {
   constructor(private _http: HttpClient) { }
 
 
-  getUser(): Observable<any> {
-    return this._http.get(`${this.baseUrl}/get`);
+  getAllUser(): Observable<Iuser[]> {
+    return this._http.get<Iuser[]>(`${this.baseUrl}/get`);
+  }
+
+  addUser(user: Iuser): Observable<Iuser> {
+    return this._http.post<Iuser>(`${this.baseUrl}/post`, user)
   }
 
 }

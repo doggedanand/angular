@@ -1,38 +1,78 @@
 {
-    "post": [
-        {
-            "id": "1",
-            "name": "Anand",
-            "age": 22,
-            "gender": "Male",
-            "address": "Jalalabad",
-            "designation": "Programmer"
-        }
-    ],
-    "get": [
-        {
-            "id": "1",
-            "name": "Anand",
-            "age": 22,
-            "gender": "Male",
-            "address": "Jalalabad",
-            "designation": "Programmer"
-        },
-        {
-            "id": "2",
-            "name": "Rahul",
-            "age": 18,
-            "gender": "Male",
-            "address": "Bhagirathpur",
-            "designation": "Programmer"
-        },
-        {
-            "id": "3",
-            "name": "Ashish",
-            "age": 23,
-            "gender": "Male",
-            "address": "Bhagirathpur",
-            "designation": "Programmer"
-        }
-    ]
+  "post": [
+    {
+      "id": "1",
+      "name": "Anand",
+      "age": 22,
+      "gender": "Male",
+      "address": "Jalalabad",
+      "designation": "Programmer"
+    },
+    {
+      "id": 0,
+      "name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "designation": ""
+    },
+    {
+      "id": 0,
+      "name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "designation": ""
+    },
+    {
+      "id": 0,
+      "name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "designation": ""
+    },
+    {
+      "id": 0,
+      "name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "designation": ""
+    },
+    {
+      "id": "a955",
+      "name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "designation": ""
+    }
+  ],
+  "get": [
+    {
+      "id": "1",
+      "name": "Anand",
+      "age": 22,
+      "gender": "Male",
+      "address": "Jalalabad",
+      "designation": "Programmer"
+    },
+    {
+      "id": "2",
+      "name": "Rahul",
+      "age": 18,
+      "gender": "Male",
+      "address": "Bhagirathpur",
+      "designation": "Programmer"
+    },
+    {
+      "id": "3",
+      "name": "Ashish",
+      "age": 23,
+      "gender": "Male",
+      "address": "Bhagirathpur",
+      "designation": "Programmer"
+    }
+  ]
 }
