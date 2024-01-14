@@ -13,11 +13,22 @@ export class UserService {
 
 
   getAllUser(): Observable<Iuser[]> {
-    return this._http.get<Iuser[]>(`${this.baseUrl}/get`);
-  }
+    return this._http.get<Iuser[]>(`${this.baseUrl}/posts`);
+  };
 
   addUser(user: Iuser): Observable<Iuser> {
-    return this._http.post<Iuser>(`${this.baseUrl}/post`, user)
-  }
+    return this._http.post<Iuser>(`${this.baseUrl}/posts`, user);
+  };
 
+  removeUser(user: Iuser): Observable<Iuser> {
+    return this._http.delete<Iuser>(`${this.baseUrl}/posts/${user.id}`);
+  };
+
+  getUserById(userId: any): Observable<Iuser> {
+    return this._http.get<Iuser>(`${this.baseUrl}/posts/${userId}`);
+  };
+
+  updateUser(userID: number, user: Iuser): Observable<Iuser> {
+    return this._http.put<Iuser>(`${this.baseUrl}/posts/${userID}`, user);
+  };
 }
