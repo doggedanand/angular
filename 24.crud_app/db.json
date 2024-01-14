@@ -1,52 +1,36 @@
 {
-  "post": [
+  "posts": [
     {
-      "id": "1",
-      "name": "Anand",
+      "name": "anand vishwakarma",
       "age": 22,
       "gender": "Male",
-      "address": "Jalalabad",
-      "designation": "Programmer"
+      "address": "jalalabad",
+      "designation": "programmer",
+      "id": "399b"
     },
     {
-      "id": 0,
-      "name": "",
-      "age": 0,
-      "gender": "",
-      "address": "",
-      "designation": ""
+      "name": "rahul tyagi",
+      "age": 18,
+      "gender": "Male",
+      "address": "bhagirathpur",
+      "designation": "programmer and teacher",
+      "id": "d5f3"
     },
     {
-      "id": 0,
-      "name": "",
-      "age": 0,
-      "gender": "",
-      "address": "",
-      "designation": ""
+      "name": "admin_user",
+      "age": 33,
+      "gender": "Male",
+      "address": "naikdih",
+      "designation": "administrator",
+      "id": "6eef"
     },
     {
-      "id": 0,
-      "name": "",
-      "age": 0,
-      "gender": "",
-      "address": "",
-      "designation": ""
-    },
-    {
-      "id": 0,
-      "name": "",
-      "age": 0,
-      "gender": "",
-      "address": "",
-      "designation": ""
-    },
-    {
-      "id": "a955",
-      "name": "",
-      "age": 0,
-      "gender": "",
-      "address": "",
-      "designation": ""
+      "name": "pradeep",
+      "age": 20,
+      "gender": "Male",
+      "address": "naikdih",
+      "designation": "student",
+      "id": "8581"
     }
   ],
   "get": [
