@@ -9,6 +9,11 @@ import { RegisterComponent } from './user/register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
+import { ProfileComponent } from './user/profile/profile.component';
+import { CourseComponent } from './user/course/course.component';
+import { PaymentComponent } from './user/payment/payment.component';
+import { ResultComponent } from './user/result/result.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,11 +24,16 @@ import { DashboardComponent } from './user/dashboard/dashboard.component';
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProfileComponent,
+    CourseComponent,
+    PaymentComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
