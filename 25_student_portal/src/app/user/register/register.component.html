@@ -4,42 +4,76 @@
             <h2 class="card-title text-center mt-3">Register</h2>
             <p>Create your account. It's free and only takes a minute.</p>
             <div class="col-md-12 col-lg-12 col-sm-12  mt-3">
-                <form action="">
+                <form [formGroup]="registerForm">
                     <div class="mb-3">
                         <label class="form-label" for="">Name*</label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" formControlName="name" required>
+                        <div *ngIf="name?.invalid && (name?.touched || name?.dirty)" class="text-danger">
+                            <div *ngIf="name?.errors?.['required']">
+                                Name is required*
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="">Email*</label>
-                        <input class="form-control" type="email">
+                        <input class="form-control" type="email" formControlName="email" required>
+                        <div *ngIf="email?.invalid && (email?.touched || email?.dirty)" class="text-danger">
+                            <div *ngIf="email?.errors?.['required']"> Email is required*</div>
+                            <div *ngIf="email?.errors?.['email']">Enter valid email.</div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="">Username*</label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" formControlName="username">
+                        <div *ngIf="username?.invalid && (username?.touched || username?.dirty)" class="text-danger">
+                            <div *ngIf="username?.errors?.['required']">Username is required*</div>
+                            <div *ngIf="username?.errors?.['minlength']">Minimum length must be 3 characters*</div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="">Password*</label>
-                        <input class="form-control" type="password">
+                        <input class="form-control" type="password" formControlName="password">
+                        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
+                            <div *ngIf="password?.errors?.['required']">
+                                Password is required*
+                            </div>
+                            <div *ngIf="password?.errors?.['minlength']">
+                                Minimum length must be 8 characters*
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="">Confirm Password*</label>
-                        <input class="form-control" type="password">
+                        <input class="form-control" type="password" formControlName="confirmpassword">
+                        <div *ngIf="confirmpassword?.invalid && (confirmpassword?.dirty || confirmpassword?.touched)"
+                            class="text-danger">
+                            <div *ngIf="confirmpassword?.errors?.['required']">
+                                Confirm Password is required*
+                            </div>
+                            <div *ngIf="confirmpassword?.errors?.['minlength']">
+                                Minimum length must be 8 characters*
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3 justify-content-start d-flex">
 
                         <label class="form-check-lable" for="">Gender*</label>
                         <div class="ms-3">
-
-                            <input class="form-check-input" name="gender" type="radio">
+                            <input class="form-check-input" value="Male" name="gender" type="radio"
+                                formControlName="gender">
                             <label for="">Male</label>
                         </div>
                         <div class="ms-3">
-                            <input class="form-check-input" name="gender" type="radio">
+                            <input class="form-check-input" value="Female" name="gender" type="radio"
+                                formControlName="gender">
                             <label for="">Female</label>
+                        </div>
+                        <div *ngIf="gender?.invalid && (gender?.touched || gender?.dirty)" class="text-danger">
+                            <div *ngIf="gender?.errors?.['required']">Gender is required*</div>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary mb-3">Register</button>
+                    <button [disabled]="registerForm.invalid" class="btn btn-primary mb-3">Register</button>
                 </form>
             </div>
 
