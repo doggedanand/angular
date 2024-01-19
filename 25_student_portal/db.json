@@ -1,7 +1,31 @@
 {
-    "posts": [
-        {
-            
-        }
-    ]
+  "posts": [
+    {
+      "id": "1bf5",
+      "name": "anand",
+      "email": "rd.anandv@gmail.com",
+      "username": "doggedanand",
+      "password": "admin@123",
+      "confirmpassword": "admin@123",
+      "gender": "Male"
+    },
+    {
+      "id": "34eb",
+      "name": "anand vishwakarma",
+      "email": "win.anandv@gmail.com",
+      "username": "anand",
+      "password": "admin@123",
+      "confirmpassword": "admin@123",
+      "gender": "Male"
+    },
+    {
+      "id": "0907",
+      "name": "new user",
+      "email": "newuser@gmail.com",
+      "username": "new_user",
+      "password": "admin@123",
+      "confirmpassword": "admin@123",
+      "gender": "Male"
+    }
+  ]
 }
