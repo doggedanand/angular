@@ -20,9 +20,12 @@ export class RegisterComponent implements OnInit {
       username: new FormControl('', [Validators.required, Validators.minLength(3)]),
       password: new FormControl('', [Validators.required, Validators.minLength(8)]),
       confirmpassword: new FormControl('', [Validators.required, Validators.minLength(8)]),
-      gender: new FormControl('', [Validators.required])
-    })
+      gender: new FormControl('', [Validators.required]),
+      isLogin: new FormControl(false)
+    });
   }
+
+
   get name() {
     return this.registerForm.get('name')
   }
