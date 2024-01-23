@@ -6,13 +6,14 @@ import { LoginComponent } from './user/login/login.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { ProfileComponent } from './user/profile/profile.component';
+import { GuardGuard } from './guard.guard';
 
 const routes: Routes = [
   { path: "", component: HomepageComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
   { path: "contact", component: ContactUsComponent },
-  { path: "dashboard", component: DashboardComponent },
+  { path: "dashboard", canActivate: [GuardGuard], component: DashboardComponent },
   { path: "profile", component: ProfileComponent }
 ];
 

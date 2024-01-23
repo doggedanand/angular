@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
+
   private baseUrl = 'http://localhost:3000'
   constructor(private http: HttpClient) { }
 
@@ -19,5 +20,9 @@ export class UserService {
 
   getAllUserData(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/posts`)
+  }
+  
+  isLoggedInStatus() {
+    return localStorage.getItem('user');
   }
 }
