@@ -34,19 +34,20 @@ export class LoginComponent implements OnInit {
     this.userService.getAllUserData().
       subscribe((res) => {
         this.allUser = res;
-        console.log("all user data:", res);
+        // console.log("all user data:", res);
       })
   }
   onLogin(userData: any) {
 
     const userFound = (this.allUser)
       .find((data: any) =>
-        
+
         data.email === userData.email && data.password === userData.password
-       
+
 
       )
     if (userFound) {
+      userFound.isLogin = true;
       alert('Login Success!')
       const userJSON = JSON.stringify(userFound)
       localStorage.setItem('user', userJSON)
