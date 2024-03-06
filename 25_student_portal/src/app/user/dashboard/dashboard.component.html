@@ -14,10 +14,13 @@
                         Payment</li>
                     <li class="list-group-item" [class.active]="selectedOption==='Result'" (click)="showResult()">Result
                     </li>
+                    <li class="list-group-item" [class.active]="selectedOption==='ContactUser'" (click)="showContactUser()">
+                        Contact-User
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-9 mb-3">
             <ng-container *ngComponentOutlet="displayComp"></ng-container>
         </div>
     </div>

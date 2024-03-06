@@ -1,2 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap-icons/font/bootstrap-icons.css';
+
+.anta-regular {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+body {
+    /* background: rgb(244, 249, 239); */
+    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(25,50,55,1)); */
+    background: rgb(255, 195, 169);
+    background: radial-gradient(circle, rgba(255, 195, 169, 0.16290266106442575) 0%, rgba(148, 187, 233, 1) 100%);
+}

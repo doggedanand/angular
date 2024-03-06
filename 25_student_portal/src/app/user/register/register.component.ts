@@ -49,7 +49,8 @@ export class RegisterComponent implements OnInit {
     console.log(form);
     this._userService.postUser(form).
       subscribe((res) => {
-        if (res) {
+        if (res && res.acknowledged === true && res.insertedId) {
+          console.log("after res", res)
 
           alert("User Added!");
           this.registerForm.reset();

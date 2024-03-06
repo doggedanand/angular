@@ -14,7 +14,13 @@ import { CourseComponent } from './user/course/course.component';
 import { PaymentComponent } from './user/payment/payment.component';
 import { ResultComponent } from './user/result/result.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LogoutComponent } from './user/logout/logout.component';
+import { LoaderComponent } from './loader/loader.component';
+import { ChatButtonComponent } from './chat-button/chat-button.component';
+import { ChatFormComponent } from './chat-form/chat-form.component';
+import { ChatUserComponent } from './chat-user/chat-user.component';
+import { ContactUserComponent } from './user/contact-user/contact-user.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +35,13 @@ import {HttpClientModule} from '@angular/common/http'
     ProfileComponent,
     CourseComponent,
     PaymentComponent,
-    ResultComponent
+    ResultComponent,
+    LogoutComponent,
+    LoaderComponent,
+    ChatButtonComponent,
+    ChatFormComponent,
+    ChatUserComponent,
+    ContactUserComponent,
   ],
   imports: [
     BrowserModule,
