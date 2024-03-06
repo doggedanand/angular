@@ -11,18 +11,22 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   postUser(userData: any): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/posts`, userData);
+    return this.http.post<any>(`${this.baseUrl}/create-user`, userData);
   };
 
   loginUser(loginData: any): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/posts`, loginData);
+    return this.http.post<any>(`${this.baseUrl}/login-user`, loginData);
   }
 
   getAllUserData(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/posts`)
+    return this.http.get<any>(`${this.baseUrl}/posts`);
   }
-  
+
   isLoggedInStatus() {
     return localStorage.getItem('user');
+  }
+
+  postChatUser(userData: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/post/chat-user`, userData);
   }
 }

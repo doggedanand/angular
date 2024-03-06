@@ -1,0 +1,12 @@
+<!-- ==== Chat button ==== -->
+<button *ngIf="showButtons && !displayComp" class="btn btn-sm btn-dark border border-dark rounded-circle p-3 fw-bold"
+    (click)="showContactForm()">Chat</button>
+<button *ngIf="showButtons && displayComp" class="btn btn-sm btn-dark border border-dark rounded-circle p-3 fw-bold"
+    id="close-chat" (click)="hideContactForm()">Close</button>
+
+<!-- ==== Dynamic component loading ==== -->
+<ng-container *ngComponentOutlet="displayComp">
+</ng-container>
+<ng-container *ngIf="displayComp === ChatFComponent">
+    <app-chat-form (formSubmitted)="chatData($event)"></app-chat-form>
+</ng-container>

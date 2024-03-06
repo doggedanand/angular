@@ -9,14 +9,14 @@ import { UserService } from '../services/user.service';
 export class HeaderComponent implements OnInit {
   selectedOption: string = "Login";
   user!: any;
-  constructor(private _userService:UserService) {
+  constructor(private _userService: UserService) {
   }
 
   ngOnInit(): void {
-     
-    this.user = this._userService.isLoggedInStatus()
+
+    this.user = this._userService.isLoggedInStatus();
   }
 
- 
-  
+
+
 }

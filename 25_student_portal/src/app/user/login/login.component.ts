@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('')
     })
-    this.showUserData();
+    // this.showUserData();
   }
   get email() {
     return this.loginForm.get("email")
@@ -34,27 +34,38 @@ export class LoginComponent implements OnInit {
     this.userService.getAllUserData().
       subscribe((res) => {
         this.allUser = res;
-        // console.log("all user data:", res);
+        console.log("all user data:", res);
       })
   }
+
   onLogin(userData: any) {
 
-    const userFound = (this.allUser)
-      .find((data: any) =>
+    this.userService.loginUser(userData)
+      .subscribe(res => {
+        console.log("res after ", res);
+        if (res && res.success === true) {
+          console.log('res', res)
 
-        data.email === userData.email && data.password === userData.password
+          alert(res.message);
+          const userJSON = JSON.stringify(res.user);
+          localStorage.setItem('user', userJSON);
+          this.router.navigate(['/dashboard']);
+          console.log(userJSON);
+        } else {
+          alert("User credentialnot matched. Try again!");
+        }
+      }, (error) => {
+        console.log('error by backend', error);
+        if (error && error.status === 401) {
+          alert("Invalid credentials. Try again!");
+        } else {
+          console.error("Error:", error);
+          alert("Something went wrong. Please try again later.");
+        }
+      }
+      );
 
 
-      )
-    if (userFound) {
-      userFound.isLogin = true;
-      alert('Login Success!')
-      const userJSON = JSON.stringify(userFound)
-      localStorage.setItem('user', userJSON)
-      this.router.navigate(['/dashboard'])
-    } else {
-      alert("User credentialnot matched. Try again!")
-    }
   }
 
 }

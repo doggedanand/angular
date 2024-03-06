@@ -1,0 +1,32 @@
+.notification {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.notification:hover {
+    background-color: #bababa;
+    font-style: italic;
+}
+
+#swipe-btn {
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    z-index: 999;
+}
+
+#swipe-btn-options {
+    position: fixed;
+    bottom: 110px;
+    z-index: 999;
+    left: 45px;
+}
+
+.card:hover {
+    font-weight: bold;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

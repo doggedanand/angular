@@ -1,0 +1,28 @@
+<!-- <div class="contdainer shadow-lg" id="chat-box"> -->
+<div class="row d-inline" id="chat-box">
+    <div class="col-md-3 mx-auto d-inline">
+        <div class="card ">
+            <div class="card-body ">
+                <h5 class="card-title text-center">Contact Us</h5>
+                <form [formGroup]="chatForm" (ngSubmit)="chatUser(chatForm.value)">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Name:</label>
+                        <input class="form-control" type="text" formControlName="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-lable">Email:</label>
+                        <input type="text" class="form-control" formControlName="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Message:</label>
+                        <textarea cols="20" rows="3" class="form-control" formControlName="message"></textarea>
+                    </div>
+                    <!-- <div class="mb-3"> -->
+                    <button [disabled]="!chatForm.valid" class="btn btn-success btn-sm">Submit</button>
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </div> -->
